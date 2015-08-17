@@ -26,9 +26,9 @@ import UIKit
 
 extension UIFont {
     
-    var fontWithMonospacedNumbers: UIFont {
+    var monospacedDigitFont: UIFont {
         let oldFontDescriptor = fontDescriptor()
-        let newFontDescriptor = oldFontDescriptor.fontDescriptorWithMonospacedNumbers
+        let newFontDescriptor = oldFontDescriptor.monospacedDigitFontDescriptor
         return UIFont(descriptor: newFontDescriptor, size: 0)
     }
     
@@ -38,7 +38,7 @@ extension UIFont {
 
 private extension UIFontDescriptor {
     
-    var fontDescriptorWithMonospacedNumbers: UIFontDescriptor {
+    var monospacedDigitFontDescriptor: UIFontDescriptor {
         let fontDescriptorFeatureSettings = [[UIFontFeatureTypeIdentifierKey: kNumberSpacingType, UIFontFeatureSelectorIdentifierKey: kMonospacedNumbersSelector]]
         let fontDescriptorAttributes = [UIFontDescriptorFeatureSettingsAttribute: fontDescriptorFeatureSettings]
         let fontDescriptor = self.fontDescriptorByAddingAttributes(fontDescriptorAttributes)
