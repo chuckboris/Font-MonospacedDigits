@@ -22,8 +22,6 @@
 
 import UIKit
 
-// MARK: Implementation
-
 extension UIFont {
     
     var monospacedDigitFont: UIFont {
@@ -33,8 +31,6 @@ extension UIFont {
     }
     
 }
-
-// MARK: Utilities
 
 private extension UIFontDescriptor {
     
